@@ -1,32 +1,100 @@
 # ASTON
-## Homework 5
+## Homework 6
 
- ✅ Задание 1 –  Какие бывают алгоритмы сортировок ? 
+ ✅ Задание 1 – <code>
+ 
+      console.log('1');
 
- ✅ Задание 2 –  Прочитать про "Операторы и выражения, циклы в JS"
+      setTimeout(() => console.log('2'), 1);
 
- ✅ Задание 3 –   Создать объект Person несколькими способами, после создать объект Person2, чтобы в нём были доступны методы объекта Person. Добавить метод logInfo чтоб он был доступен всем объектам.
+      let promiseNew = new Promise((resolve) => {
+        console.log('3');
+        resolve();
+      });
 
- ✅ Задание 4 –  Создать класс PersonThree c get и set для поля name и конструктором, сделать класс наследник от класса Person.
+      promiseNew.then(() => console.log('4'));
 
+      setTimeout(() => console.log('5'));
 
+      console.log('6');
+</code>
+ ✅ Задание 2 –  <code>
 
+      let promiseTree = new Promise((resolve, reject) => {
+      resolve("a");
 
+      console.log("1");
 
-   ✳️ Бонус ✳️
+      setTimeout(() => {
+        console.log("2");
+      }, 0);
 
-✅ Задание 1 – Написать функцию, которая вернет массив с первой парой чисел, сумма которых равна total:
-
-<code>
-  arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  total = 13;
-  //result = [4, 9]
-
-  const firstSum = (arr, total) => {
-        //Решение
-  }
-
-  firstSum(arr,total)
+      console.log("3");
+      });
 </code>
 
-✅ Задание 2 – Какая сложность у вашего алгоритма ?
+ ✅ Задание 3 –  <code>
+
+      let promiseTwo = new Promise((resolve, reject) => {
+        resolve("a");
+      });
+
+      promiseTwo
+      .then((res) => {
+        return res + "b";
+      })
+      .then((res) => {
+        return res + "с";
+      })
+      .finally((res) => {
+        return res + "!!!!!!!";
+      })
+      .catch((res) => {
+        return res + "d";
+      })
+      .then((res) => {
+        console.log(res);
+      });
+</code>
+
+ ✅ Задание 4 –  <code>
+
+      function doSmth() {
+        return Promise.resolve("123");
+      }
+
+      doSmth()
+      .then(function (a) {
+        console.log("1", a); //
+        return a;
+      })
+      .then(function (b) {
+        console.log("2", b);
+        return Promise.reject("321");
+      })
+      .catch(function (err) {
+        console.log("3", err);
+      })
+      .then(function (c) {
+        console.log("4", c);
+      return c;
+      });
+</code>
+ ✅ Задание 5 –  <code>
+
+      console.log("1");
+
+      setTimeout(function () {
+          console.log("2");
+      }, 0);
+
+      Promise.resolve().then(() => console.log("3"));
+
+      console.log("4");
+</code>
+ ✅ Задание 6 –   Напишите функцию, которая будет проходить через массив целых чисел и выводить индекс каждого элемента с задержкой в 3 секунды.
+          
+          Входные данные: [10, 12, 15, 21];
+
+ ✅ Задание 7 –  Прочитать про Top Level Await (можно ли использовать await вне функции async)
+
