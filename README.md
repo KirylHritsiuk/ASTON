@@ -1,9 +1,10 @@
 # ASTON
 ## Homework 6
 
- ✅ Задание 1 – <code>
+ ✅ Задание 1 – 
  
-      console.log('1');
+ 
+      <code>console.log('1');
 
       setTimeout(() => console.log('2'), 1);
 
@@ -16,10 +17,10 @@
 
       setTimeout(() => console.log('5'));
 
-      console.log('6');
-</code>
- ✅ Задание 2 –  <code>
-
+      console.log('6');</code>
+      
+ ✅ Задание 2 –  
+ 
       let promiseTree = new Promise((resolve, reject) => {
       resolve("a");
 
@@ -31,33 +32,31 @@
 
       console.log("3");
       });
-</code>
 
- ✅ Задание 3 –  <code>
+ ✅ Задание 3 – 
 
-      let promiseTwo = new Promise((resolve, reject) => {
-        resolve("a");
-      });
+     let promiseTwo = new Promise((resolve, reject) => {
+       resolve("a");
+     });
 
-      promiseTwo
-      .then((res) => {
-        return res + "b";
-      })
-      .then((res) => {
-        return res + "с";
-      })
-      .finally((res) => {
-        return res + "!!!!!!!";
-      })
-      .catch((res) => {
-        return res + "d";
-      })
-      .then((res) => {
-        console.log(res);
-      });
-</code>
+     promiseTwo
+     .then((res) => {
+       return res + "b";
+     })
+     .then((res) => {
+       return res + "с";
+     })
+     .finally((res) => {
+       return res + "!!!!!!!";
+     })
+     .catch((res) => {
+       return res + "d";
+     })
+     .then((res) => {
+       console.log(res);
+     });
 
- ✅ Задание 4 –  <code>
+ ✅ Задание 4 – 
 
       function doSmth() {
         return Promise.resolve("123");
@@ -79,8 +78,8 @@
         console.log("4", c);
       return c;
       });
-</code>
- ✅ Задание 5 –  <code>
+
+ ✅ Задание 5 – 
 
       console.log("1");
 
@@ -91,7 +90,7 @@
       Promise.resolve().then(() => console.log("3"));
 
       console.log("4");
-</code>
+
  ✅ Задание 6 –   Напишите функцию, которая будет проходить через массив целых чисел и выводить индекс каждого элемента с задержкой в 3 секунды.
           
           Входные данные: [10, 12, 15, 21];
