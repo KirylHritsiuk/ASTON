@@ -2,9 +2,8 @@
 ## Homework 6
 
  ✅ Задание 1 – 
- 
- 
-      <code>console.log('1');
+
+      console.log('1');
 
       setTimeout(() => console.log('2'), 1);
 
@@ -17,7 +16,7 @@
 
       setTimeout(() => console.log('5'));
 
-      console.log('6');</code>
+      console.log('6');
       
  ✅ Задание 2 –  
  
