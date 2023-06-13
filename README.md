@@ -1,100 +1,32 @@
 # ASTON
-## Homework 6
+## Homework 7
 
- ✅ Задание 1 – <code>
+ ✅ Задание 1 – Почитать про принципы программирования KISS, DRY, YAGNI
  
-      console.log('1');
+ ✅ Задание 2 – Прочитать про способы хранения LocalStorage, SessionStorage и Cookie
 
-      setTimeout(() => console.log('2'), 1);
+ ✅ Задание 3 – HTML / CSS - Базовая структура html документа, БЭМ методология
+     
+    <!DOCTYPE html>
+      <head></head>
+      <body></body>
+    </html>
 
-      let promiseNew = new Promise((resolve) => {
-        console.log('3');
-        resolve();
-      });
+    БЭМ — аббревиатура от трех слов Блок(логически и функционально независимый компонент страницы), Элемент(часть блока, которая не может использоваться в отрыве от него и имеет смысл только в рамках своего родителя) и Модификатор(свойство блока или элемента, которое меняет их внешний вид, состояние или поведение).
+    Методология БЭМ создана в Яндексе для разработки сайтов, которые надо делать быстро,а поддерживать долгие годы
 
-      promiseNew.then(() => console.log('4'));
+ ✅ Задание 4 – Способы позиционирования контента на странице
 
-      setTimeout(() => console.log('5'));
+      static - default
+      relative
+      absolute
+      fixed
+      sticky
 
-      console.log('6');
-</code>
- ✅ Задание 2 –  <code>
+ ✅ Задание 5 – Веса селекторов
 
-      let promiseTree = new Promise((resolve, reject) => {
-      resolve("a");
-
-      console.log("1");
-
-      setTimeout(() => {
-        console.log("2");
-      }, 0);
-
-      console.log("3");
-      });
-</code>
-
- ✅ Задание 3 –  <code>
-
-      let promiseTwo = new Promise((resolve, reject) => {
-        resolve("a");
-      });
-
-      promiseTwo
-      .then((res) => {
-        return res + "b";
-      })
-      .then((res) => {
-        return res + "с";
-      })
-      .finally((res) => {
-        return res + "!!!!!!!";
-      })
-      .catch((res) => {
-        return res + "d";
-      })
-      .then((res) => {
-        console.log(res);
-      });
-</code>
-
- ✅ Задание 4 –  <code>
-
-      function doSmth() {
-        return Promise.resolve("123");
-      }
-
-      doSmth()
-      .then(function (a) {
-        console.log("1", a); //
-        return a;
-      })
-      .then(function (b) {
-        console.log("2", b);
-        return Promise.reject("321");
-      })
-      .catch(function (err) {
-        console.log("3", err);
-      })
-      .then(function (c) {
-        console.log("4", c);
-      return c;
-      });
-</code>
- ✅ Задание 5 –  <code>
-
-      console.log("1");
-
-      setTimeout(function () {
-          console.log("2");
-      }, 0);
-
-      Promise.resolve().then(() => console.log("3"));
-
-      console.log("4");
-</code>
- ✅ Задание 6 –   Напишите функцию, которая будет проходить через массив целых чисел и выводить индекс каждого элемента с задержкой в 3 секунды.
-          
-          Входные данные: [10, 12, 15, 21];
-
- ✅ Задание 7 –  Прочитать про Top Level Await (можно ли использовать await вне функции async)
-
+      1,0,0,0  Инлайн стили
+      0,1,0,0  Идентификаторы
+      0,0,1,0  Классы, атрибуты и псевдоклассы
+      0,0,0,1  Теги и псевдоэлементы
+ 
